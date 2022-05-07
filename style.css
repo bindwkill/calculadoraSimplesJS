@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'digital-7';
+  src: url('./fonts/digital-7.ttf');
+}
+
+.calc-container {
+  background: url('./imgs/plastic.jpg');
+  border-radius: 1vw;
+  max-width: fit-content;
+}
+
+.calc-button {
+  font-size: 4em;
+  width: 8rem;
+  text-align: center;
+  margin: 0.75rem;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: darkgrey;
+  border-color: black;
+  color: black;
+  border-radius: 1vw;
+}
+
+.huge-button {
+  height: 15.5rem;
+}
+
+.red-button {
+  color: rgb(125, 37, 37)
+}
+
+.num-pad {
+  display: block;
+  width: 27rem;
+  margin: 0.75rem;
+}
+
+.ops-pad {
+  display: block;
+  width: 18rem;
+  margin: 0.75rem;
+}
+
+.clicked {
+  background-color: dimgray;
+}
+
+.digital-display {
+  font-size: 4em;
+  text-align: right;
+  font-family: 'digital-7', sans-serif;
+  transform: translateY(0.5rem)
+}
