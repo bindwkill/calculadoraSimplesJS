@@ -1,7 +1,7 @@
 const display = document.querySelector("[data-name=display]")
 const calculator = document.querySelector("[data-name=calculator]")
 
-let number = 0
+let number = ''
 let previousNumber = 0
 let operatorWasPressed = false
 let lastOperator = '+'
@@ -14,7 +14,7 @@ const operations = {
 }
 
 const realizeOperation = () => {
-  previousNumber = operations[lastOperator](previousNumber, number)
+  previousNumber = operations[lastOperator](previousNumber, Number(number))
   display.value = previousNumber
   operatorWasPressed = true
 }
@@ -24,14 +24,16 @@ const keyDownEvent = event => {
   display.focus()
 
   if (!key) { return }
+  const isADot = key === '.'
 
-  if (!isNaN(key)) {
+  if (!isNaN(key) || isADot) {
     if (operatorWasPressed) {
-      number = Number(key)
+      number = isADot ? '0.' : key
       operatorWasPressed = false
     }
     else {
-      number = Number(`${number}${key}`)
+      const alreadyFloat = number.includes('.')
+      number = alreadyFloat && isADot ? number : `${number}${key}`
     }
     display.value = number
     return
@@ -39,7 +41,7 @@ const keyDownEvent = event => {
 
   switch (key) {
     case 'Escape': {
-      number = 0
+      number = ''
       previousNumber = 0
       lastOperator = '+'
       display.value = number
@@ -60,7 +62,7 @@ const keyDownEvent = event => {
       break
     }
     case 'Delete': {
-      number = 0
+      number = ''
       display.value = number
     }
     case '+/-': {
@@ -69,7 +71,7 @@ const keyDownEvent = event => {
         display.value = previousNumber
         break
       }
-      number *= -1
+      number = String(number * -1)
       display.value = number
       break
     }
