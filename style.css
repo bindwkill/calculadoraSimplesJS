@@ -5,24 +5,20 @@
 
 .calc-container {
   background: url('./imgs/plastic.jpg');
-  border-radius: 1vw;
+  border-radius: 0.5vmax;
   max-width: fit-content;
 }
 
 .calc-button {
-  font-size: 4em;
-  width: 8rem;
+  font-size: 4vmax;
+  width: 8vmax;
   text-align: center;
-  margin: 0.75rem;
+  margin: 0.25vmax;
   font-family: Arial, Helvetica, sans-serif;
   background-color: darkgrey;
   border-color: black;
   color: black;
-  border-radius: 1vw;
-}
-
-.huge-button {
-  height: 15.5rem;
+  border-radius: 0.5vmax;
 }
 
 .red-button {
@@ -31,14 +27,14 @@
 
 .num-pad {
   display: block;
-  width: 27rem;
-  margin: 0.75rem;
+  width: 27vmax;
+  margin: 0.75vmax auto 0.75vmax 0.75vmax;
 }
 
 .ops-pad {
   display: block;
-  width: 18rem;
-  margin: 0.75rem;
+  width: 18vmax;
+  margin: 0.75vmax 0.75vmax 0.75vmax auto;
 }
 
 .clicked {
@@ -46,8 +42,9 @@
 }
 
 .digital-display {
-  font-size: 4em;
+  font-size: 4vmax;
   text-align: right;
+  margin: 0.75vmax auto 0.75vmax auto;
   font-family: 'digital-7', sans-serif;
-  transform: translateY(0.5rem)
+  transform: translateY(0.75vmax)
 }

@@ -2,7 +2,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="./style.css">
@@ -16,12 +16,12 @@
       <h1 class="mb-4">Calculadora em Javascript</h1>
     </header>
 
-    <div class="container-fluid bg-light mx-auto py-2 calc-container" data-name="calculator">
+    <div class="container-fluid bg-light calc-container" data-name="calculator">
 
       <input class="form-control digital-display" data-name="display" type="text" placeholder="0" readonly autofocus />
 
       <div class="row">
-        <div class="num-pad">
+        <div class="col col-7 num-pad">
           <div class="row row-cols-3">
             <button type="button" class="btn btn-secondary calc-button" data-key="7">7</button>
             <button type="button" class="btn btn-secondary calc-button" data-key="8">8</button>
@@ -41,15 +41,15 @@
           </div>
         </div>
 
-        <div class="ops-pad">
-          <div class="row row-cols-2">
+        <div class="col col- ops-pad">
+          <div class="row row-sm justify-content-end row-cols-2">
             <button type="button" class="btn btn-secondary calc-button" data-key="Delete">CE</button>
             <button type="button" class="btn btn-danger calc-button red-button" data-key="Escape">C</button>
             <div class="w-100"></div>
             <button type="button" class="btn btn-secondary calc-button" data-key="-">-</button>
             <button type="button" class="btn btn-secondary calc-button" data-key="*">*</button>
             <div class="w-100"></div>
-            <button type="button" class="btn btn-secondary calc-button huge-button" data-key="+">+</button>
+            <button type="button" class="btn btn-secondary calc-button" data-key="+">+</button>
             <div>
               <button type="button" class="btn btn-secondary calc-button" data-key="/">/</button>
               <div class="w-100"></div>
